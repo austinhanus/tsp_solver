@@ -13,12 +13,12 @@
 /*--------------------------------------------------------------------------*/
 
 #include <stdio.h>
-#include <math.h>					 //abs()
+#include <math.h>		//abs()
 #include <vector>
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <float.h>					//DBL_MAX
+#include <float.h>	       //DBL_MAX
 #include "point.cpp"
 using namespace std;
 
@@ -26,8 +26,8 @@ using namespace std;
 /* GLOBAL VARIABLES */
 /*--------------------------------------------------------------------------*/
 
-vector<Point> v;				//Vector to hold all Points from input
-double distanceTraveled;			//Holds total distance traveled
+vector<Point> v;		//Vector to hold all Points from input
+double distanceTraveled;	//Holds total distance traveled
 
 /*--------------------------------------------------------------------------*/
 /* HELPER FUNCTIONS */
@@ -63,7 +63,7 @@ void readFromStandardInput() {
 			p.setID(id);        //Record the ID (order of input)
 			++id; 
 			v.push_back(p);
-		} else { }		    //Do nothing if there isn't a digit at start
+		} else { 	//Do nothing if there isn't a digit at start
 	}
 }
 
@@ -74,7 +74,7 @@ void findPath() {
 	distanceTraveled = 0.0;
 	Point start = v[0];
 	Point current = start;
-	v.erase(v.begin());			//Removes the starting Point from vector
+	v.erase(v.begin());		//Removes the starting Point from vector
 	cout << current.getID() << endl;
 	while (v.size() != 0) {
 		int indexOfMin = 0;
