@@ -13,7 +13,7 @@
 /*--------------------------------------------------------------------------*/
 
 #include <stdio.h>
-#include <math.h>					  //abs()
+#include <math.h>					 //abs()
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -26,7 +26,7 @@ using namespace std;
 /* GLOBAL VARIABLES */
 /*--------------------------------------------------------------------------*/
 
-vector<Point> v;					    //Vector to hold all Points from input
+vector<Point> v;				//Vector to hold all Points from input
 double distanceTraveled;			//Holds total distance traveled
 
 /*--------------------------------------------------------------------------*/
@@ -55,7 +55,7 @@ Point stringToPoint(string input) {
 void readFromStandardInput() {
 	cout << "Input Points\n";
 	string s;
-	int id = 0;				    	//Start id at 0
+	int id = 0;			    //Start id at 0
 	while(!cin.eof()) {
 		getline(cin, s);
 		if(isdigit(s[0])) {
@@ -63,7 +63,7 @@ void readFromStandardInput() {
 			p.setID(id);        //Record the ID (order of input)
 			++id; 
 			v.push_back(p);
-		} else { }			    	//Do nothing if there isn't a digit at start
+		} else { }		    //Do nothing if there isn't a digit at start
 	}
 }
 
@@ -74,7 +74,7 @@ void findPath() {
 	distanceTraveled = 0.0;
 	Point start = v[0];
 	Point current = start;
-	v.erase(v.begin());				//Removes the starting Point from vector
+	v.erase(v.begin());			//Removes the starting Point from vector
 	cout << current.getID() << endl;
 	while (v.size() != 0) {
 		int indexOfMin = 0;
