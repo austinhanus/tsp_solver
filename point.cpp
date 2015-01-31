@@ -25,9 +25,9 @@ using namespace std;
 
 class Point {
 private:
-	double xPosition;			//X position on cartesian plane
-	double yPosition;			//Y position on cartesian plane
-	int pointID;			  	//Records order of how points are read in
+	double xPosition;	//X position on cartesian plane
+	double yPosition;	//Y position on cartesian plane
+	int pointID;		//Records order of how points are read in
 public:
 	Point(double x, double y)
 		:xPosition(x), yPosition(y) {}
